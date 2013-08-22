@@ -21,6 +21,12 @@
 			<version>2.2.0-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.1.7.Final</version>
+		</dependency>
 	</dependencies>
 
 	<repositories>
