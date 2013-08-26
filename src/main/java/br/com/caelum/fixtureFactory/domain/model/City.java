@@ -1,10 +1,17 @@
 package br.com.caelum.fixtureFactory.domain.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class City {
 
 	private Long id;
 	private String name;
-	
+
+	@Id
+	@GeneratedValue
 	public Long getId() {
 		return id;
 	}
