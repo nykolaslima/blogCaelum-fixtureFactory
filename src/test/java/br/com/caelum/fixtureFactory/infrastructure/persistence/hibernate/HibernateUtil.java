@@ -13,8 +13,6 @@ import org.hibernate.service.ServiceRegistryBuilder;
 import br.com.caelum.fixtureFactory.domain.model.Address;
 import br.com.caelum.fixtureFactory.domain.model.City;
 import br.com.caelum.fixtureFactory.domain.model.State;
-import br.com.caelum.fixtureFactory.domain.model.Task;
-import br.com.caelum.fixtureFactory.domain.model.TaskType;
 import br.com.caelum.fixtureFactory.domain.model.User;
 
 public class HibernateUtil {
@@ -35,8 +33,6 @@ public class HibernateUtil {
 					.configure(getHibernateCfgLocation());
 			HibernateUtil.logger.info("Configurando entidades..");
 
-			cfg.addAnnotatedClass(Task.class);
-			cfg.addAnnotatedClass(TaskType.class);
 			cfg.addAnnotatedClass(User.class);
 			cfg.addAnnotatedClass(Address.class);
 			cfg.addAnnotatedClass(State.class);
