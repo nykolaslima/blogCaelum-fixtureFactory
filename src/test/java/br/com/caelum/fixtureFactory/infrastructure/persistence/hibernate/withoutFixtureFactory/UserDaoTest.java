@@ -19,10 +19,12 @@ public class UserDaoTest {
 	private User user;
 	private City city;
 	private Session session;
+	private UserDao userDao;
 	
 	@Before
 	public void setUp() {
 		session = HibernateUtil.currentSession();
+		userDao = new UserDao(session);
 		HibernateUtil.beginTransaction();
 		
 		State state = new State();
@@ -53,8 +55,6 @@ public class UserDaoTest {
 	
 	@Test
 	public void shouldFindUserByCity() {
-		UserDao userDao = new UserDao(HibernateUtil.currentSession());
-		
 		assertTrue(userDao.findByCity(city).contains(user));
 	}
 
